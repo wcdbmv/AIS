@@ -18,6 +18,7 @@
 		// Possible Problems
 		"array-callback-return": "error",
 		"no-await-in-loop": "error",
+		"no-constant-condition": ["error", {"checkLoops": false}],
 		"no-constructor-return": "error",
 		"no-duplicate-imports": ["error", {"includeExports": true}],
 		"no-promise-executor-return": "error",
