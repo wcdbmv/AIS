@@ -23,7 +23,7 @@ const getPath = (root: TreeNode, name: string): string[] => {
 	return path;
 };
 
-const calculateCommonParents = (root: TreeNode, name1: string, name2: string): number => {
+export const calculateCommonParents = (root: TreeNode, name1: string, name2: string): number => {
 	const path1 = getPath(root, name1);
 	const path2 = getPath(root, name2);
 	for (let i = 0; i < path1.length; ++i) {
@@ -33,6 +33,3 @@ const calculateCommonParents = (root: TreeNode, name1: string, name2: string): n
 	}
 	return path1.length;
 };
-
-
-export {calculateCommonParents};

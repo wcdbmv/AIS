@@ -1,10 +1,7 @@
 import {InodeData, LeafData} from './data';
 
 
-type TreeNode = {
+export type TreeNode = {
 	data: InodeData | LeafData,
 	children: TreeNode[],
 };
-
-
-export {TreeNode};

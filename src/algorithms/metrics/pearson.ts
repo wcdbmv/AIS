@@ -8,7 +8,7 @@ const calculateMean = (x: LeafData): number =>
 		0
 	) / NUMERIC_FIELDS_OF_LEAF_DATA.length;
 
-const calculatePearsonCorrelationCoefficient = (p: LeafData, q: LeafData): number => {
+export const calculatePearsonCorrelationCoefficient = (p: LeafData, q: LeafData): number => {
 	const meanP = calculateMean(p);
 	const meanQ = calculateMean(q);
 
@@ -23,6 +23,3 @@ const calculatePearsonCorrelationCoefficient = (p: LeafData, q: LeafData): numbe
 
 	return covariance / Math.sqrt(varianceP * varianceQ);
 };
-
-
-export {calculatePearsonCorrelationCoefficient};

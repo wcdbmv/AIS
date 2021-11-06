@@ -1,8 +1,8 @@
-type InodeData = {
+export type InodeData = {
 	name: string,
 };
 
-type LeafData = {
+export type LeafData = {
 	name: string,
 	volume: number,
 	price: number,
@@ -13,7 +13,4 @@ type LeafData = {
 	mainTaste: string,
 };
 
-const NUMERIC_FIELDS_OF_LEAF_DATA = ['volume', 'price', 'abv', 'age'];
-
-
-export {InodeData, LeafData, NUMERIC_FIELDS_OF_LEAF_DATA};
+export const NUMERIC_FIELDS_OF_LEAF_DATA = ['volume', 'price', 'abv', 'age'];
