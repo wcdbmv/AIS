@@ -1,0 +1,22 @@
+{
+  "name": "ais",
+  "version": "1.0.0",
+  "description": "Recommend system",
+  "main": "src/main.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcdbmv/AIS.git"
+  },
+  "author": "Kerimov A. <kerimov.dev@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wcdbmv/AIS/issues"
+  },
+  "homepage": "https://github.com/wcdbmv/AIS#readme"
+}
