@@ -1,11 +1,15 @@
-import {LeafData, NUMERIC_FIELDS_OF_LEAF_DATA} from '../../types/data';
+import {
+	NumericLeafData,
+	NUMERIC_LEAF_DATA_FIELDS,
+	NUMERIC_LEAF_DATA_FIELDS_WEIGHTS,
+} from '../../types/data';
 
 
-export const calculateEuclideanDistance = (p: LeafData, q: LeafData): number =>
+export const calculateEuclideanDistance = (x: NumericLeafData, y: NumericLeafData): number =>
 	Math.sqrt(
-		NUMERIC_FIELDS_OF_LEAF_DATA.reduce(
+		NUMERIC_LEAF_DATA_FIELDS.reduce(
 			(acc: number, cur: string): number =>
-				acc + (p[cur] - q[cur]) ** 2,
+				acc + NUMERIC_LEAF_DATA_FIELDS_WEIGHTS[cur] * (y[cur] - x[cur]) ** 2,
 			0
 		)
 	);

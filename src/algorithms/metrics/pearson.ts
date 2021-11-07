@@ -1,25 +1,37 @@
-import {LeafData, NUMERIC_FIELDS_OF_LEAF_DATA} from '../../types/data';
+import {
+	NumericLeafData,
+	NUMERIC_LEAF_DATA_FIELDS,
+	NUMERIC_LEAF_DATA_FIELDS_WEIGHTS,
+} from '../../types/data';
 
 
-const calculateMean = (x: LeafData): number =>
-	NUMERIC_FIELDS_OF_LEAF_DATA.reduce(
+const NUMERIC_LEAF_DATA_FIELDS_WEIGHTS_SUM =
+	NUMERIC_LEAF_DATA_FIELDS.reduce(
 		(acc: number, cur: string): number =>
-			acc + x[cur],
+			acc + NUMERIC_LEAF_DATA_FIELDS_WEIGHTS[cur],
 		0
-	) / NUMERIC_FIELDS_OF_LEAF_DATA.length;
+	);
 
-export const calculatePearsonCorrelationCoefficient = (p: LeafData, q: LeafData): number => {
-	const meanP = calculateMean(p);
-	const meanQ = calculateMean(q);
+const calculateMean = (x: NumericLeafData): number =>
+	NUMERIC_LEAF_DATA_FIELDS.reduce(
+		(acc: number, cur: string): number =>
+			acc + NUMERIC_LEAF_DATA_FIELDS_WEIGHTS[cur] * x[cur],
+		0
+	) / NUMERIC_LEAF_DATA_FIELDS_WEIGHTS_SUM;
+
+export const calculatePearsonCorrelationCoefficient = (x: NumericLeafData, y: NumericLeafData): number => {
+	const meanX = calculateMean(x);
+	const meanY = calculateMean(y);
 
 	let covariance = 0;
-	let varianceP = 0;
-	let varianceQ = 0;
-	NUMERIC_FIELDS_OF_LEAF_DATA.forEach((field: string) => {
-		covariance += (p[field] - meanP) * (q[field] - meanQ);
-		varianceP += (p[field] - meanP) ** 2;
-		varianceQ += (q[field] - meanQ) ** 2;
+	let varianceX = 0;
+	let varianceY = 0;
+	NUMERIC_LEAF_DATA_FIELDS.forEach((field: string) => {
+		const weight = NUMERIC_LEAF_DATA_FIELDS_WEIGHTS[field];
+		covariance += weight * (x[field] - meanX) * (y[field] - meanY);
+		varianceX += weight * (x[field] - meanX) ** 2;
+		varianceY += weight * (y[field] - meanY) ** 2;
 	});
 
-	return covariance / Math.sqrt(varianceP * varianceQ);
+	return covariance / Math.sqrt(varianceX * varianceY);
 };
