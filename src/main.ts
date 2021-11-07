@@ -2,11 +2,11 @@ import * as alcoholMap from '../docs/alcohol-map.json';
 import {LeafData, NumericLeafData} from './types/data';
 import {TreeNode} from './types/node';
 import {getLeaves, normalizeLeaves} from './algorithms/leaves';
-import {calculateEuclideanDistance} from './algorithms/metrics/euclidean';
-import {calculateManhattanDistance} from './algorithms/metrics/manhattan';
-import {calculateTreeDistance} from './algorithms/metrics/tree';
-import {calculatePearsonCorrelationCoefficient} from './algorithms/metrics/pearson';
-import {calculateCustomDistance} from './algorithms/metrics/custom';
+import {calculateEuclideanDistance} from './metrics/euclidean';
+import {calculateManhattanDistance} from './metrics/manhattan';
+import {calculateTreeDistance} from './metrics/tree';
+import {calculatePearsonCorrelationCoefficient} from './metrics/pearson';
+import {calculateCustomDistance} from './metrics/custom';
 import {readProduct} from './io/readProduct';
 
 

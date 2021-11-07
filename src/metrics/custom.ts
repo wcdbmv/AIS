@@ -1,5 +1,5 @@
-import {NumericLeafData} from '../../types/data';
-import {TreeNode} from '../../types/node';
+import {NumericLeafData} from '../types/data';
+import {TreeNode} from '../types/node';
 import {calculateEuclideanDistance} from './euclidean';
 import {calculateTreeDistance} from './tree';
 

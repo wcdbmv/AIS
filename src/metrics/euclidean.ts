@@ -2,7 +2,7 @@ import {
 	NumericLeafData,
 	NUMERIC_LEAF_DATA_FIELDS,
 	NUMERIC_LEAF_DATA_FIELDS_WEIGHTS,
-} from '../../types/data';
+} from '../types/data';
 
 
 export const calculateEuclideanDistance = (x: NumericLeafData, y: NumericLeafData): number =>

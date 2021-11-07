@@ -1,4 +1,4 @@
-import {TreeNode} from '../../types/node';
+import {TreeNode} from '../types/node';
 
 
 const findReversedPath = (name: string, node: TreeNode, path: string[]): boolean => {

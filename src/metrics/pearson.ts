@@ -2,7 +2,7 @@ import {
 	NumericLeafData,
 	NUMERIC_LEAF_DATA_FIELDS,
 	NUMERIC_LEAF_DATA_FIELDS_WEIGHTS,
-} from '../../types/data';
+} from '../types/data';
 
 
 const NUMERIC_LEAF_DATA_FIELDS_WEIGHTS_SUM =
