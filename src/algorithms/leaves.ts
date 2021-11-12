@@ -1,35 +1,40 @@
-import {LEAF_DATA_NUMERIC_FIELDS} from '../types/data';
+import {ExtendedLeafData, LEAF_DATA_NUMERIC_FIELDS, LeafData} from '../types/data';
 import {TreeNode} from '../types/node';
 
 
-export const getLeaves = (node: TreeNode): TreeNode[] =>
+export const getLeavesData = (node: TreeNode): LeafData[] =>
 	node.children.length
-		? node.children.flatMap(getLeaves)
-		: [node];
+		? node.children.flatMap(getLeavesData)
+		: [node.data as LeafData];
 
-const calculateMinMaxOfNumericFields = (leaves: TreeNode[]): {minimumsOfNumericFields, maximumsOfNumericFields} => {
+type MinMaxRet = {
+	minimumsOfNumericFields: number[],
+	maximumsOfNumericFields: number[],
+};
+
+const calculateMinMaxOfNumericFields = (leavesData: LeafData[]): MinMaxRet => {
 	const minimumsOfNumericFields = Array(LEAF_DATA_NUMERIC_FIELDS.length).fill(Infinity);
 	const maximumsOfNumericFields = Array(LEAF_DATA_NUMERIC_FIELDS.length).fill(-Infinity);
-	for (let i = 0; i < leaves.length; ++i) {
+	for (let i = 0; i < leavesData.length; ++i) {
 		for (let j = 0; j < LEAF_DATA_NUMERIC_FIELDS.length; ++j) {
 			const field: string = LEAF_DATA_NUMERIC_FIELDS[j];
-			minimumsOfNumericFields[j] = Math.min(leaves[i].data[field], minimumsOfNumericFields[j]);
-			maximumsOfNumericFields[j] = Math.max(leaves[i].data[field], maximumsOfNumericFields[j]);
+			minimumsOfNumericFields[j] = Math.min(leavesData[i][field], minimumsOfNumericFields[j]);
+			maximumsOfNumericFields[j] = Math.max(leavesData[i][field], maximumsOfNumericFields[j]);
 		}
 	}
 	return {minimumsOfNumericFields, maximumsOfNumericFields};
 };
 
-export const normalizeLeaves = (leaves: TreeNode[]): TreeNode[] => {
-	const {minimumsOfNumericFields, maximumsOfNumericFields} = calculateMinMaxOfNumericFields(leaves);
-	const normalizedLeaves: TreeNode[] = JSON.parse(JSON.stringify(leaves));
-	for (let i = 0; i < leaves.length; ++i) {
+export const normalizeLeavesData = (leavesData: LeafData[]): ExtendedLeafData[] => {
+	const {minimumsOfNumericFields, maximumsOfNumericFields} = calculateMinMaxOfNumericFields(leavesData);
+	const normalizedLeavesData: ExtendedLeafData[] = leavesData.map((leafData: LeafData): ExtendedLeafData => new ExtendedLeafData(leafData));
+	for (let i = 0; i < leavesData.length; ++i) {
 		for (let j = 0; j < LEAF_DATA_NUMERIC_FIELDS.length; ++j) {
 			const field: string = LEAF_DATA_NUMERIC_FIELDS[j];
 			const min: number = minimumsOfNumericFields[j];
 			const max: number = maximumsOfNumericFields[j];
-			normalizedLeaves[i].data[field] = (leaves[i].data[field] - min) / (max - min);
+			normalizedLeavesData[i].normalized[field] = (leavesData[i][field] - min) / (max - min);
 		}
 	}
-	return normalizedLeaves;
+	return normalizedLeavesData;
 };

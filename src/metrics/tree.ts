@@ -1,3 +1,4 @@
+import {ExtendedLeafData} from '../types/data';
 import {TreeNode} from '../types/node';
 
 
@@ -32,9 +33,9 @@ const calculateCommonParents = (path1: string[], path2: string[]): number => {
 	return path1.length;
 };
 
-export const calculateTreeDistance = (root: TreeNode, name1: string, name2: string): number => {
-	const path1 = getPath(root, name1);
-	const path2 = getPath(root, name2);
-	const nCommonParents = calculateCommonParents(path1, path2);
-	return (path1.length - nCommonParents) / (path1.length - 1);
+export const calculateTreeDistance = (root: TreeNode, leaf1: ExtendedLeafData, leaf2: ExtendedLeafData): number => {
+	leaf1.path = getPath(root, leaf1.source.name);
+	leaf2.path = getPath(root, leaf2.source.name);
+	const nCommonParents = calculateCommonParents(leaf1.path, leaf2.path);
+	return (leaf1.path.length - nCommonParents) / (leaf1.path.length - 1);
 };

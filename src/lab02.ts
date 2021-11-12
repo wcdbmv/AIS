@@ -1,7 +1,7 @@
 import * as alcoholMap from '../docs/alcohol-map.json';
-import {LeafData, NumericLeafData} from './types/data';
+import {LeafData, ExtendedLeafData} from './types/data';
 import {TreeNode} from './types/node';
-import {getLeaves, normalizeLeaves} from './algorithms/leaves';
+import {getLeavesData, normalizeLeavesData} from './algorithms/leaves';
 import {calculateEuclideanDistance} from './metrics/euclidean';
 import {calculateManhattanDistance} from './metrics/manhattan';
 import {calculateTreeDistance} from './metrics/tree';
@@ -10,12 +10,11 @@ import {calculateCustomDistance} from './metrics/custom';
 import {readProduct} from './io/readProduct';
 
 
-const main = () => {
+const lab02 = () => {
 	const root: TreeNode = alcoholMap;
-	const leaves: TreeNode[] = getLeaves(root);
-	const normalizedLeaves: TreeNode[] = normalizeLeaves(leaves);
-	const numericLeavesData: NumericLeafData[] = normalizedLeaves.map(leaf => new NumericLeafData(leaf.data as LeafData));
-	const products: string[] = leaves.map(leaf => leaf.data.name);
+	const leavesData: LeafData[] = getLeavesData(root);
+	const extendedLeavesData: ExtendedLeafData[] = normalizeLeavesData(leavesData);
+	const products: string[] = leavesData.map((leafData: LeafData): string => leafData.name);
 
 	console.log('List of products: ', products);
 
@@ -25,14 +24,14 @@ const main = () => {
 		const product1 = readProduct('first', products);
 		const product2 = readProduct('second', products);
 
-		const leafData1 = numericLeavesData[products.indexOf(product1)];
-		const leafData2 = numericLeavesData[products.indexOf(product2)];
+		const extendedLeafData1 = extendedLeavesData[products.indexOf(product1)];
+		const extendedLeafData2 = extendedLeavesData[products.indexOf(product2)];
 
-		const euclideanDistance = calculateEuclideanDistance(leafData1, leafData2);
-		const manhattanDistance = calculateManhattanDistance(leafData1, leafData2);
-		const treeDistance = calculateTreeDistance(root, product1, product2);
-		const pearsonCorrelationCoefficient = calculatePearsonCorrelationCoefficient(leafData1, leafData2);
-		const customDistance = calculateCustomDistance(root, leafData1, leafData2);
+		const euclideanDistance = calculateEuclideanDistance(extendedLeafData1, extendedLeafData2);
+		const manhattanDistance = calculateManhattanDistance(extendedLeafData1, extendedLeafData2);
+		const treeDistance = calculateTreeDistance(root, extendedLeafData1, extendedLeafData2);
+		const pearsonCorrelationCoefficient = calculatePearsonCorrelationCoefficient(extendedLeafData1, extendedLeafData2);
+		const customDistance = calculateCustomDistance(root, extendedLeafData1, extendedLeafData2);
 
 		console.log(`Euclidean distance: ${euclideanDistance}`);
 		console.log(`Manhattan distance: ${manhattanDistance}`);
@@ -42,4 +41,4 @@ const main = () => {
 	}
 };
 
-main();
+lab02();

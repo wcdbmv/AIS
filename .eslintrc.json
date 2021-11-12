@@ -105,7 +105,7 @@
 		"spaced-comment": "error",
 		"strict": "error",
 		"symbol-description": "error",
-		"yoda": "error",
+		"yoda": ["error", "never", {"exceptRange": true}],
 
 		// Layout & Formatting
 		"semi": "error"

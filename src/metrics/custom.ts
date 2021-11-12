@@ -1,8 +1,11 @@
-import {NumericLeafData} from '../types/data';
+import {ExtendedLeafData} from '../types/data';
 import {TreeNode} from '../types/node';
 import {calculateEuclideanDistance} from './euclidean';
 import {calculateTreeDistance} from './tree';
 
 
-export const calculateCustomDistance = (root: TreeNode, x: NumericLeafData, y: NumericLeafData): number =>
-	calculateEuclideanDistance(x, y) + calculateTreeDistance(root, x.name, y.name);
+const EW = 0.8;
+const TW = 1.2;
+
+export const calculateCustomDistance = (root: TreeNode, x: ExtendedLeafData, y: ExtendedLeafData): number =>
+	EW * calculateEuclideanDistance(x, y) + TW * calculateTreeDistance(root, x, y);

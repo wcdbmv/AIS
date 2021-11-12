@@ -1,13 +1,13 @@
 import {
-	NumericLeafData,
-	NUMERIC_LEAF_DATA_FIELDS,
-	NUMERIC_LEAF_DATA_FIELDS_WEIGHTS,
+	ExtendedLeafData,
+	EXTENDED_LEAF_DATA_NORMALIZED_FIELDS,
+	EXTENDED_LEAF_DATA_NORMALIZED_FIELDS_WEIGHTS,
 } from '../types/data';
 
 
-export const calculateManhattanDistance = (x: NumericLeafData, y: NumericLeafData): number =>
-	NUMERIC_LEAF_DATA_FIELDS.reduce(
+export const calculateManhattanDistance = (x: ExtendedLeafData, y: ExtendedLeafData): number =>
+	EXTENDED_LEAF_DATA_NORMALIZED_FIELDS.reduce(
 		(acc: number, cur: string): number =>
-			acc + NUMERIC_LEAF_DATA_FIELDS_WEIGHTS[cur] * Math.abs(y[cur] - x[cur]),
+			acc + EXTENDED_LEAF_DATA_NORMALIZED_FIELDS_WEIGHTS[cur] * Math.abs(y.normalized[cur] - x.normalized[cur]),
 		0
 	);

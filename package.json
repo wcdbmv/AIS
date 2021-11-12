@@ -2,11 +2,13 @@
   "name": "ais",
   "version": "1.0.0",
   "description": "Recommend system",
-  "main": "src/main.ts",
+  "main": "src/lab02.ts",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "lab02": "npx ts-node src/lab02.ts",
+    "lab02-table": "npx ts-node src/lab02-table.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

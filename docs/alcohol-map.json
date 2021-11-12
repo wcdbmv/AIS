@@ -474,7 +474,7 @@
 								},
 								{
 									"data": {
-										"name": "Westmalle",
+										"name": "Westmalle Dark",
 										"volume": 0.33,
 										"price": 250,
 										"abv": 7,
@@ -533,7 +533,7 @@
 								},
 								{
 									"data": {
-										"name": "Westmalle",
+										"name": "Westmalle Light",
 										"volume": 0.33,
 										"price": 320,
 										"abv": 10,
@@ -731,7 +731,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Martini",
+										"name": "Martini Rose",
 										"volume": 1,
 										"price": 1115,
 										"abv": 15,
@@ -744,7 +744,7 @@
 								},
 								{
 									"data": {
-										"name": "Gancia",
+										"name": "Gancia Rose",
 										"volume": 1,
 										"price": 800,
 										"abv": 16,
@@ -757,7 +757,7 @@
 								},
 								{
 									"data": {
-										"name": "Cinzano",
+										"name": "Cinzano Rose",
 										"volume": 1,
 										"price": 980,
 										"abv": 14,
@@ -790,7 +790,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Martini",
+										"name": "Martini White",
 										"volume": 1,
 										"price": 1115,
 										"abv": 15,
@@ -803,7 +803,7 @@
 								},
 								{
 									"data": {
-										"name": "Cinzano",
+										"name": "Cinzano White",
 										"volume": 1,
 										"price": 980,
 										"abv": 15,
@@ -829,7 +829,7 @@
 								},
 								{
 									"data": {
-										"name": "Gancia",
+										"name": "Gancia White",
 										"volume": 1,
 										"price": 760,
 										"abv": 15,
