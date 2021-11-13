@@ -9,6 +9,7 @@
   "scripts": {
     "lab02": "npx ts-node src/lab02.ts",
     "lab02-table": "npx ts-node src/lab02-table.ts",
+    "lab03": "npx ts-node src/lab03.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
