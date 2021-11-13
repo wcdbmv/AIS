@@ -1,0 +1,366 @@
+{
+	"data": {
+		"name": "Кавказская кухня"
+	},
+	"children": [
+		{
+			"data": {
+				"name": "Армянская кухня"
+			},
+			"children": [
+				{
+					"data": {
+						"name": "Еда"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Женгялов хац",
+								"kcal": 267,
+								"price": 65,
+								"vegetarian": true,
+								"whereToTaste": "Кафе На Басманной",
+								"category": "Выпечка"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Лобахашу",
+								"kcal": 152,
+								"price": 135,
+								"vegetarian": true,
+								"whereToTaste": "Дорогомиловский рынок",
+								"category": "Супы"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Хоровац из овощей",
+								"kcal": 60,
+								"price": 250,
+								"vegetarian": true,
+								"whereToTaste": "Ресторан Арарат",
+								"category": "Закуски"
+							},
+							"children": []
+						}
+					]
+				},
+				{
+					"data": {
+						"name": "Напитки"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Мацун",
+								"kcal": 54,
+								"price": 20,
+								"alcoholic": false,
+								"whereToTaste": "Ресторан Мацони",
+								"category": "Напитки"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Армянский коньяк «Арарат»",
+								"kcal": 240,
+								"price": 220,
+								"alcoholic": true,
+								"whereToTaste": "Ресторан Мацони",
+								"category": "Крепкий алкоголь"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Водка «Арцах»",
+								"kcal": 220,
+								"price": 150,
+								"alcoholic": true,
+								"whereToTaste": "Арарат бар",
+								"category": "Крепкий алкоголь"
+							},
+							"children": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"data": {
+				"name": "Грузинская кухня"
+			},
+			"children": [
+				{
+					"data": {
+						"name": "Еда"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Хачапури",
+								"kcal": 350,
+								"price":80,
+								"vegetarian": true,
+								"whereToTaste": "Ресторан ДжонДжоли",
+								"category": "Выпечка"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Харчо",
+								"kcal": 90,
+								"price": 190,
+								"vegetarian": false,
+								"whereToTaste": "Ресторан ДжонДжоли",
+								"category": "Супы"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Чанахи",
+								"kcal": 56,
+								"price": 184,
+								"vegetarian": false,
+								"whereToTaste": "Какое-то место",
+								"category": "Основное"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Чашушули",
+								"kcal": 89,
+								"price": 120,
+								"vegetarian": false,
+								"whereToTaste": "Ресторан ДжонДжоли",
+								"category": "Основное"
+							},
+							"children": []
+						}
+					]
+				},
+				{
+					"data": {
+						"name": "Напитки"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Чача",
+								"kcal": 225,
+								"price": 150,
+								"alcoholic": true,
+								"whereToTaste": "Megobari",
+								"category": "Крепкий алкоголь"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Киндзмараули",
+								"kcal": 172,
+								"price": 0,
+								"alcoholic": true,
+								"whereToTaste": "Megobari",
+								"category": "Слабый алкоголь"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Натахтари",
+								"kcal": 45,
+								"price": 40,
+								"alcoholic": true,
+								"whereToTaste": "Megobari",
+								"category": "Слабый алкоголь"
+							},
+							"children": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"data": {
+				"name": "Азербайджанская кухня"
+			},
+			"children": [
+				{
+					"data": {
+						"name": "Еда"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Джыз-быз",
+								"kcal": 200,
+								"price": 210,
+								"vegetarian": false,
+								"whereToTaste": "Бакинский дворик",
+								"category": "Основное"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Соютма",
+								"kcal": 240,
+								"price": 300,
+								"vegetarian": false,
+								"whereToTaste": "Бакинский дворик",
+								"category": "Основное"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Садж-усту",
+								"kcal": 170,
+								"price": 250,
+								"vegetarian": false,
+								"whereToTaste": "Бакинский дворик",
+								"category": "Салат"
+							},
+							"children": []
+						}
+					]
+				},
+				{
+					"data": {
+						"name": "Напитки"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Атылама",
+								"kcal": 140,
+								"price": 30,
+								"alcoholic": false,
+								"whereToTaste": "Ресторан Азербайджан",
+								"category": "Напитки"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Искенджеби",
+								"kcal": 250,
+								"price": 230,
+								"alcoholic": true,
+								"whereToTaste": "Ресторан Азербайджан",
+								"category": "Крепкий алкоголь"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Арак",
+								"kcal": 210,
+								"price": 230,
+								"alcoholic": true,
+								"whereToTaste": "Ресторан Азербайджан",
+								"category": "Крепкий алкоголь"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Палуд",
+								"kcal": 80,
+								"price": 40,
+								"alcoholic": false,
+								"whereToTaste": "Ресторан Азербайджан",
+								"category": "Напитки"
+							},
+							"children": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"data": {
+				"name": "Дагестанская кухня"
+			},
+			"children": [
+				{
+					"data": {
+						"name": "Еда"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Чуду",
+								"kcal": 370,
+								"price": 30,
+								"vegetarian": true,
+								"whereToTaste": "Дагестанская лавка",
+								"category": "Выпечка"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Таба",
+								"kcal": 200,
+								"price": 370,
+								"vegetarian": false,
+								"whereToTaste": "Дагестанская лавка",
+								"category": "Основное"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Курзе",
+								"kcal": 162,
+								"price": 230,
+								"vegetarian": false,
+								"whereToTaste": "Дагестанская лавка",
+								"category": "Основное"
+							},
+							"children": []
+						}
+					]
+				},
+				{
+					"data": {
+						"name": "Напитки"
+					},
+					"children": [
+						{
+							"data": {
+								"name": "Буза",
+								"kcal": 150,
+								"price": 130,
+								"alcoholic": true,
+								"whereToTaste": "Megobari",
+								"category": "Слабый алкоголь"
+							},
+							"children": []
+						},
+						{
+							"data": {
+								"name": "Коньяк «Кизляр»",
+								"kcal": 240,
+								"price": 130,
+								"alcoholic": true,
+								"whereToTaste": "Megobari",
+								"category": "Крепкий алкоголь"
+							},
+							"children": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

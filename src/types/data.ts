@@ -6,21 +6,20 @@ export type InodeData = {
 
 export type LeafData = {
 	name: string,
-	volume: number,
+	kcal: number,
 	price: number,
-	abv: number,
-	age: number,
-	country: string,
-	carbonated: boolean,
-	mainTaste: 'bitter' | 'sour' | 'sweet',
+	vegetarian?: boolean,
+	alcoholic?: boolean,
+	whereToTaste: string,
+	category: 'Салат' | 'Закуски' | 'Выпечка' | 'Супы' | 'Основное' | 'Напитки' | 'Слабый алкоголь' | 'Крепкий алкоголь'
 };
 
-export const LEAF_DATA_NUMERIC_FIELDS = ['volume', 'price', 'abv', 'age'];
-export const LEAF_DATA_BOOLEAN_FIELDS = ['carbonated'];
+export const LEAF_DATA_NUMERIC_FIELDS = ['kcal', 'price'];
+export const LEAF_DATA_BOOLEAN_FIELDS = ['vegetarian', 'alcoholic'];
 export const LEAF_DATA_CATEGORICAL_FIELDS = [
 	{
-		name: 'mainTaste',
-		values: ['bitter', 'sour', 'sweet'],
+		name: 'category',
+		values: ['Салат', 'Закуски', 'Выпечка', 'Супы', 'Основное', 'Напитки', 'Слабый алкоголь', 'Крепкий алкоголь'],
 	},
 ];
 
@@ -28,12 +27,12 @@ export class ExtendedLeafData {
 	source: LeafData;
 	path: string[];
 	normalized: {
-		volume: number,
+		kcal: number,
 		price: number,
-		abv: number,
-		age: number,
-		carbonated: number,
-		mainTaste: number,
+		vegetarian: number,
+		alcoholic: number,
+		preparingTime: number,
+		category: number,
 	};
 	score: {
 		like: number,
@@ -45,19 +44,21 @@ export class ExtendedLeafData {
 		this.source = simpleDeepCopy(leafData);
 		this.path = [];
 		this.normalized = {
-			volume: 0,
+			kcal: 0,
 			price: 0,
-			abv: 0,
-			age: 0,
-			carbonated: 0,
-			mainTaste: 0,
+			vegetarian: 1,
+			alcoholic: 0,
+			preparingTime: 0,
+			category: 0,
 		};
 
 		LEAF_DATA_NUMERIC_FIELDS.forEach((field: string) => {
 			this.normalized[field] = leafData[field];
 		});
 		LEAF_DATA_BOOLEAN_FIELDS.forEach((field: string) => {
-			this.normalized[field] = Number(leafData[field]);
+			if (field in leafData) {
+				this.normalized[field] = Number(leafData[field]);
+			}
 		});
 		LEAF_DATA_CATEGORICAL_FIELDS.forEach(({name, values}) => {
 			this.normalized[name] = values.indexOf(leafData[name]) / (values.length - 1);
@@ -80,10 +81,9 @@ export const EXTENDED_LEAF_DATA_NORMALIZED_FIELDS =
 		);
 
 export const EXTENDED_LEAF_DATA_NORMALIZED_FIELDS_WEIGHTS = {
-	volume: 1.1,
-	price: 1.5,
-	abv: 1.5,
-	age: 0.8,
-	carbonated: 0.7,
-	mainTaste: 0.4,
+	kcal: 1.0,
+	price: 1.1,
+	vegetarian: 0.8,
+	alcoholic: 0.9,
+	category: 1.2,
 };
