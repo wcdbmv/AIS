@@ -17,7 +17,7 @@ const findReversedPath = (name: string, node: TreeNode, path: string[]): boolean
 	return false;
 };
 
-const getPath = (root: TreeNode, name: string): string[] => {
+export const getPath = (root: TreeNode, name: string): string[] => {
 	const path = [];
 	findReversedPath(name, root, path);
 	path.reverse();

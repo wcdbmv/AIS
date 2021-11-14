@@ -24,7 +24,7 @@
 	{
 		"name": "carbonated",
 		"type": "value",
-		"value": false
+		"value": true
 	},
 	{
 		"name": "mainTaste",

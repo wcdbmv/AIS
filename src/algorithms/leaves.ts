@@ -1,7 +1,6 @@
 import {getPath} from "../metrics/tree";
 import {ExtendedLeafData, LEAF_DATA_NUMERIC_FIELDS, LeafData} from '../types/data';
 import {TreeNode} from '../types/node';
-import {simpleDeepCopy} from './copy';
 
 
 export const getLeavesData = (node: TreeNode): LeafData[] =>
@@ -9,7 +8,7 @@ export const getLeavesData = (node: TreeNode): LeafData[] =>
 		? node.children.flatMap(getLeavesData)
 		: [node.data as LeafData];
 
-export type MinMaxRet = {
+type MinMaxRet = {
 	minimumsOfNumericFields: number[],
 	maximumsOfNumericFields: number[],
 };
@@ -40,12 +39,6 @@ export const normalizeLeavesData = (leavesData: LeafData[]): ExtendedLeafData[] 
 	}
 	return normalizedLeavesData;
 };
-
-export const extractLeavesData = (extendedLeavesData: ExtendedLeafData[]): LeafData[] =>
-	extendedLeavesData.map(
-		(extendedLeafData: ExtendedLeafData): LeafData =>
-			simpleDeepCopy(extendedLeafData.source)
-	);
 
 export const fillPaths = (root: TreeNode, extendedLeavesData: ExtendedLeafData[]) => {
 	extendedLeavesData.forEach(
