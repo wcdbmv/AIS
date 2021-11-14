@@ -1,5 +1,7 @@
+import {getPath} from "../metrics/tree";
 import {ExtendedLeafData, LEAF_DATA_NUMERIC_FIELDS, LeafData} from '../types/data';
 import {TreeNode} from '../types/node';
+import {simpleDeepCopy} from './copy';
 
 
 export const getLeavesData = (node: TreeNode): LeafData[] =>
@@ -7,12 +9,12 @@ export const getLeavesData = (node: TreeNode): LeafData[] =>
 		? node.children.flatMap(getLeavesData)
 		: [node.data as LeafData];
 
-type MinMaxRet = {
+export type MinMaxRet = {
 	minimumsOfNumericFields: number[],
 	maximumsOfNumericFields: number[],
 };
 
-const calculateMinMaxOfNumericFields = (leavesData: LeafData[]): MinMaxRet => {
+export const calculateMinMaxOfNumericFields = (leavesData: LeafData[]): MinMaxRet => {
 	const minimumsOfNumericFields = Array(LEAF_DATA_NUMERIC_FIELDS.length).fill(Infinity);
 	const maximumsOfNumericFields = Array(LEAF_DATA_NUMERIC_FIELDS.length).fill(-Infinity);
 	for (let i = 0; i < leavesData.length; ++i) {
@@ -37,4 +39,18 @@ export const normalizeLeavesData = (leavesData: LeafData[]): ExtendedLeafData[] 
 		}
 	}
 	return normalizedLeavesData;
+};
+
+export const extractLeavesData = (extendedLeavesData: ExtendedLeafData[]): LeafData[] =>
+	extendedLeavesData.map(
+		(extendedLeafData: ExtendedLeafData): LeafData =>
+			simpleDeepCopy(extendedLeafData.source)
+	);
+
+export const fillPaths = (root: TreeNode, extendedLeavesData: ExtendedLeafData[]) => {
+	extendedLeavesData.forEach(
+		(extendedLeafData: ExtendedLeafData) => {
+			extendedLeafData.path = getPath(root, extendedLeafData.source.name);
+		}
+	);
 };

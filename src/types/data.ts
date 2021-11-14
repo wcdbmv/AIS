@@ -24,34 +24,53 @@ export const LEAF_DATA_CATEGORICAL_FIELDS = [
 	},
 ];
 
+type NormalizedLeafData = {
+	volume: number,
+	price: number,
+	abv: number,
+	age: number,
+	carbonated: number,
+	mainTaste: number,
+};
+
+type Score = {
+	like: number,
+	dislike: number,
+	total: number,
+}
+
 export class ExtendedLeafData {
-	source: LeafData;
-	path: string[];
-	normalized: {
-		volume: number,
-		price: number,
-		abv: number,
-		age: number,
-		carbonated: number,
-		mainTaste: number,
+	source: LeafData = {
+		name: '__noname__',
+		volume: 0,
+		price: 0,
+		abv: 0,
+		age: 0,
+		country: '__no_country__',
+		carbonated: false,
+		mainTaste: 'bitter',
 	};
-	score: {
-		like: number,
-		dislike: number,
-		total: number,
+	path: string[] = [];
+	normalized: NormalizedLeafData = {
+		volume: 0.5,
+		price: 0.5,
+		abv: 0.5,
+		age: 0.5,
+		carbonated: 0.5,
+		mainTaste: 0.5,
+	};
+	score: Score = {
+		like: 0,
+		dislike: 0,
+		total: 0,
 	};
 
-	constructor(leafData: LeafData) {
+	constructor(leafData?: LeafData) {
+		if (typeof leafData === 'undefined') {
+			return;
+		}
+
 		this.source = simpleDeepCopy(leafData);
-		this.path = [];
-		this.normalized = {
-			volume: 0,
-			price: 0,
-			abv: 0,
-			age: 0,
-			carbonated: 0,
-			mainTaste: 0,
-		};
 
 		LEAF_DATA_NUMERIC_FIELDS.forEach((field: string) => {
 			this.normalized[field] = leafData[field];
@@ -62,12 +81,6 @@ export class ExtendedLeafData {
 		LEAF_DATA_CATEGORICAL_FIELDS.forEach(({name, values}) => {
 			this.normalized[name] = values.indexOf(leafData[name]) / (values.length - 1);
 		});
-
-		this.score = {
-			like: 0,
-			dislike: 0,
-			total: 0,
-		};
 	}
 }
 
