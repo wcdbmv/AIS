@@ -16,12 +16,12 @@
     "type": "git",
     "url": "git+https://github.com/wcdbmv/AIS.git"
   },
-  "author": "Kerimov A. <kerimov.dev@yandex.ru>",
+  "author": "Volkova A.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wcdbmv/AIS/issues"
+    "url": "https://github.com/volkovaan/AIS/issues"
   },
-  "homepage": "https://github.com/wcdbmv/AIS#readme",
+  "homepage": "https://github.com/volkovaan/AIS#readme",
   "dependencies": {
     "@types/readline-sync": "^1.4.4",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
