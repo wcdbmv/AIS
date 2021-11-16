@@ -3,7 +3,7 @@ import {recommend} from './recommender/recommend';
 import {LeafData, ExtendedLeafData} from './types/data';
 import {TreeNode} from './types/node';
 import {getLeavesData, normalizeLeavesData} from './algorithms/leaves';
-import {readProduct, readProducts} from './io/readProduct';
+import {readProducts} from './io/readProduct';
 
 
 const main = () => {
