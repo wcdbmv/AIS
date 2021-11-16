@@ -11,6 +11,7 @@
     "lab02-table": "npx ts-node src/lab02-table.ts",
     "lab03": "npx ts-node src/lab03.ts",
     "lab05": "npx ts-node src/lab05.ts",
+    "rk1": "npx ts-node src/rk1.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
