@@ -1,0 +1,19 @@
+[
+	{
+		"name": "kcal",
+		"type": "range",
+		"min": 0,
+		"max": 300
+	},
+	{
+		"name": "price",
+		"type": "range",
+		"min": 0,
+		"max": 300
+	},
+	{
+		"name": "category",
+		"type": "list",
+		"list": ["Салат", "Закуски", "Выпечка"]
+	}
+]

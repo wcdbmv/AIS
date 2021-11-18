@@ -11,7 +11,7 @@ export type LeafData = {
 	vegetarian?: boolean,
 	alcoholic?: boolean,
 	whereToTaste: string,
-	category: 'Салат' | 'Закуски' | 'Выпечка' | 'Супы' | 'Основное' | 'Напитки' | 'Слабый алкоголь' | 'Крепкий алкоголь'
+	category: 'Салат' | 'Закуски' | 'Выпечка' | 'Супы' | 'Основное' | 'Напитки' | 'Слабый алкоголь' | 'Крепкий алкоголь',
 };
 
 export const LEAF_DATA_NUMERIC_FIELDS = ['kcal', 'price'];
@@ -23,34 +23,52 @@ export const LEAF_DATA_CATEGORICAL_FIELDS = [
 	},
 ];
 
+type NormalizedLeafData = {
+	kcal: number,
+	price: number,
+	vegetarian: number,
+	alcoholic: number,
+	category: number,
+};
+
+type Score = {
+	like: number,
+	dislike: number,
+	total: number,
+}
+
 export class ExtendedLeafData {
-	source: LeafData;
-	path: string[];
-	normalized: {
-		kcal: number,
-		price: number,
-		vegetarian: number,
-		alcoholic: number,
-		preparingTime: number,
-		category: number,
+	source: LeafData = {
+		name: '__noname__',
+		kcal: 0,
+		price: 0,
+		vegetarian: false,
+		alcoholic: false,
+		whereToTaste: '__no_place__',
+		category: 'Салат'
 	};
-	score: {
-		like: number,
-		dislike: number,
-		total: number,
+	path: string[] = [];
+	normalized: NormalizedLeafData = {
+		kcal: 0.5,
+		price: 0.5,
+		vegetarian: 0.5,
+		alcoholic: 0.5,
+		category: 0.5,
+	};
+	score: Score = {
+		like: 0,
+		dislike: 0,
+		total: 0,
 	};
 
-	constructor(leafData: LeafData) {
+	constructor(leafData?: LeafData) {
+		if (typeof leafData === 'undefined') {
+			return;
+		}
+
 		this.source = simpleDeepCopy(leafData);
-		this.path = [];
-		this.normalized = {
-			kcal: 0,
-			price: 0,
-			vegetarian: 1,
-			alcoholic: 0,
-			preparingTime: 0,
-			category: 0,
-		};
+		this.normalized.vegetarian = 1;
+		this.normalized.alcoholic = 0;
 
 		LEAF_DATA_NUMERIC_FIELDS.forEach((field: string) => {
 			this.normalized[field] = leafData[field];
@@ -63,12 +81,6 @@ export class ExtendedLeafData {
 		LEAF_DATA_CATEGORICAL_FIELDS.forEach(({name, values}) => {
 			this.normalized[name] = values.indexOf(leafData[name]) / (values.length - 1);
 		});
-
-		this.score = {
-			like: 0,
-			dislike: 0,
-			total: 0,
-		};
 	}
 }
 

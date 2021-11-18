@@ -1,3 +1,4 @@
+import {getPath} from "../metrics/tree";
 import {ExtendedLeafData, LEAF_DATA_NUMERIC_FIELDS, LeafData} from '../types/data';
 import {TreeNode} from '../types/node';
 
@@ -12,7 +13,7 @@ type MinMaxRet = {
 	maximumsOfNumericFields: number[],
 };
 
-const calculateMinMaxOfNumericFields = (leavesData: LeafData[]): MinMaxRet => {
+export const calculateMinMaxOfNumericFields = (leavesData: LeafData[]): MinMaxRet => {
 	const minimumsOfNumericFields = Array(LEAF_DATA_NUMERIC_FIELDS.length).fill(Infinity);
 	const maximumsOfNumericFields = Array(LEAF_DATA_NUMERIC_FIELDS.length).fill(-Infinity);
 	for (let i = 0; i < leavesData.length; ++i) {
@@ -37,4 +38,12 @@ export const normalizeLeavesData = (leavesData: LeafData[]): ExtendedLeafData[] 
 		}
 	}
 	return normalizedLeavesData;
+};
+
+export const fillPaths = (root: TreeNode, extendedLeavesData: ExtendedLeafData[]) => {
+	extendedLeavesData.forEach(
+		(extendedLeafData: ExtendedLeafData) => {
+			extendedLeafData.path = getPath(root, extendedLeafData.source.name);
+		}
+	);
 };
