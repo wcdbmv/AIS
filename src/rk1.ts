@@ -1,4 +1,4 @@
-import * as alcoholMap from '../docs/caucasian-cuisine-map.json';
+import * as caucasianCuisineMap from '../docs/caucasian-cuisine-map.json';
 import * as readlineSync from 'readline-sync';
 import * as fs from 'fs';
 import {simpleDeepCopy} from "./algorithms/copy";
@@ -92,7 +92,7 @@ class RK1 {
 
 
 const main = () => {
-	const root: TreeNode = alcoholMap;
+	const root: TreeNode = caucasianCuisineMap;
 
 	const rk1 = new RK1(root);
 	rk1.run();

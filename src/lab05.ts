@@ -1,4 +1,4 @@
-import * as alcoholMap from '../docs/caucasian-cuisine-map.json';
+import * as caucasianCuisineMap from '../docs/caucasian-cuisine-map.json';
 import * as searchConfigJson from '../docs/search-config.json';
 import {ApproxSearchEngine} from './search/approx';
 import {LeafData, ExtendedLeafData} from './types/data';
@@ -9,7 +9,7 @@ import {SearchEngine} from './search/search';
 
 
 const main = () => {
-	const root: TreeNode = alcoholMap;
+	const root: TreeNode = caucasianCuisineMap;
 	const leavesData: LeafData[] = getLeavesData(root);
 	const extendedLeavesData: ExtendedLeafData[] = normalizeLeavesData(leavesData);
 

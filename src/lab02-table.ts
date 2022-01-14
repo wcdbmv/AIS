@@ -1,4 +1,4 @@
-import * as alcoholMap from '../docs/caucasian-cuisine-map.json';
+import * as caucasianCuisineMap from '../docs/caucasian-cuisine-map.json';
 import {LeafData, ExtendedLeafData} from './types/data';
 import {TreeNode} from './types/node';
 import {getLeavesData, normalizeLeavesData} from './algorithms/leaves';
@@ -10,7 +10,7 @@ import {calculateCustomDistance} from './metrics/custom';
 
 
 const main = () => {
-	const root: TreeNode = alcoholMap;
+	const root: TreeNode = caucasianCuisineMap;
 	const leavesData: LeafData[] = getLeavesData(root);
 	const extendedLeavesData: ExtendedLeafData[] = normalizeLeavesData(leavesData);
 
