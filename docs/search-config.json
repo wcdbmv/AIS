@@ -1,34 +1,19 @@
 [
 	{
-		"name": "volume",
+		"name": "kcal",
 		"type": "range",
-		"min": 0.33,
-		"max": 0.5
+		"min": 0,
+		"max": 300
 	},
 	{
 		"name": "price",
 		"type": "range",
-		"min": 130,
-		"max": 600
+		"min": 0,
+		"max": 300
 	},
 	{
-		"name": "abv",
-		"type": "value",
-		"value": 5
-	},
-	{
-		"name": "age",
-		"type": "value",
-		"value": 1
-	},
-	{
-		"name": "carbonated",
-		"type": "value",
-		"value": true
-	},
-	{
-		"name": "mainTaste",
+		"name": "category",
 		"type": "list",
-		"list": ["bitter", "sweet"]
+		"list": ["Салат", "Закуски", "Выпечка"]
 	}
 ]
