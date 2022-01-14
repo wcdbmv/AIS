@@ -1,4 +1,4 @@
-import * as alcoholMap from '../docs/alcohol-map.json';
+import * as alcoholMap from '../../docs/alcohol-map.json';
 import {LeafData, ExtendedLeafData} from './types/data';
 import {TreeNode} from './types/node';
 import {getLeavesData, normalizeLeavesData} from './algorithms/leaves';

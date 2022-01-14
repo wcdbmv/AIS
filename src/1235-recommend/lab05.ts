@@ -1,5 +1,5 @@
-import * as alcoholMap from '../docs/alcohol-map.json';
-import * as searchConfigJson from '../docs/search-config.json';
+import * as alcoholMap from '../../docs/alcohol-map.json';
+import * as searchConfigJson from '../../docs/search-config.json';
 import {ApproxSearchEngine} from './search/approx';
 import {LeafData, ExtendedLeafData} from './types/data';
 import {TreeNode} from './types/node';

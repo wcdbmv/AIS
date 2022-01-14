@@ -1,4 +1,4 @@
-import * as alcoholMap from '../docs/alcohol-map.json';
+import * as alcoholMap from '../../docs/alcohol-map.json';
 import * as readlineSync from 'readline-sync';
 import * as fs from 'fs';
 import {simpleDeepCopy} from "./algorithms/copy";
