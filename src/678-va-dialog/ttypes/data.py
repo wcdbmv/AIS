@@ -98,7 +98,7 @@ class ExtendedLeafData:
 EXTENDED_LEAF_DATA_NORMALIZED_FIELDS = \
     LEAF_DATA_NUMERIC_FIELDS + \
     LEAF_DATA_BOOLEAN_FIELDS + \
-    tuple(map(lambda field: field['name'], LEAF_DATA_CATEGORICAL_FIELDS))
+    tuple(field['name'] for field in LEAF_DATA_CATEGORICAL_FIELDS)
 
 EXTENDED_LEAF_DATA_NORMALIZED_FIELDS_WEIGHTS = {
     'kcal': 1.0,

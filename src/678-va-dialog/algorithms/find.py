@@ -5,7 +5,6 @@ def find(iterable, pred, default=None):
 
     If *pred* is not None, returns the first item
     for which pred(item) is true.
-
     """
     # first_true([a,b,c], x) --> a or b or c or x
     # first_true([a,b], x, f) --> a if f(a) else b if f(b) else x

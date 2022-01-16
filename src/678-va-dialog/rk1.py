@@ -48,13 +48,7 @@ class RK1:
         print(end='\033[H\033[J')
 
     def recommend(self):
-        products: List[str] = list(
-            map(
-                lambda leaf_data:
-                    leaf_data.source['name'],
-                self.working_leaves_data
-            )
-        )
+        products: List[str] = [leaf_data.source['name'] for leaf_data in self.working_leaves_data]
         print('List of products: ', products)
 
         likes = read_products('likes', products)
