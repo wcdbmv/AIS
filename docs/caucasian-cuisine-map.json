@@ -15,7 +15,7 @@
 					"children": [
 						{
 							"data": {
-								"name": "Женгялов хац",
+								"name": "Женгяловхац",
 								"kcal": 267,
 								"price": 65,
 								"vegetarian": true,
@@ -31,18 +31,18 @@
 								"price": 135,
 								"vegetarian": true,
 								"whereToTaste": "Дорогомиловский рынок",
-								"category": "Супы"
+								"category": "Суп"
 							},
 							"children": []
 						},
 						{
 							"data": {
-								"name": "Хоровац из овощей",
+								"name": "Хоровац",
 								"kcal": 60,
 								"price": 250,
 								"vegetarian": true,
 								"whereToTaste": "Ресторан Арарат",
-								"category": "Закуски"
+								"category": "Закуска"
 							},
 							"children": []
 						}
@@ -60,13 +60,13 @@
 								"price": 20,
 								"alcoholic": false,
 								"whereToTaste": "Ресторан Мацони",
-								"category": "Напитки"
+								"category": "Напиток"
 							},
 							"children": []
 						},
 						{
 							"data": {
-								"name": "Армянский коньяк «Арарат»",
+								"name": "Арарат",
 								"kcal": 240,
 								"price": 220,
 								"alcoholic": true,
@@ -77,7 +77,7 @@
 						},
 						{
 							"data": {
-								"name": "Водка «Арцах»",
+								"name": "Арцах",
 								"kcal": 220,
 								"price": 150,
 								"alcoholic": true,
@@ -118,7 +118,7 @@
 								"price": 190,
 								"vegetarian": false,
 								"whereToTaste": "Ресторан ДжонДжоли",
-								"category": "Супы"
+								"category": "Суп"
 							},
 							"children": []
 						},
@@ -200,7 +200,7 @@
 					"children": [
 						{
 							"data": {
-								"name": "Джыз-быз",
+								"name": "Джызбыз",
 								"kcal": 200,
 								"price": 210,
 								"vegetarian": false,
@@ -222,7 +222,7 @@
 						},
 						{
 							"data": {
-								"name": "Садж-усту",
+								"name": "Саджусту",
 								"kcal": 170,
 								"price": 250,
 								"vegetarian": false,
@@ -245,7 +245,7 @@
 								"price": 30,
 								"alcoholic": false,
 								"whereToTaste": "Ресторан Азербайджан",
-								"category": "Напитки"
+								"category": "Напиток"
 							},
 							"children": []
 						},
@@ -278,7 +278,7 @@
 								"price": 40,
 								"alcoholic": false,
 								"whereToTaste": "Ресторан Азербайджан",
-								"category": "Напитки"
+								"category": "Напиток"
 							},
 							"children": []
 						}
@@ -349,7 +349,7 @@
 						},
 						{
 							"data": {
-								"name": "Коньяк «Кизляр»",
+								"name": "Кизляр",
 								"kcal": 240,
 								"price": 130,
 								"alcoholic": true,
