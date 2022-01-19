@@ -20,7 +20,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Ron Barcelo, Anejo, 0.7 л",
+										"name": "RonBarceloAnejo",
 										"volume": 0.7,
 										"price": 1200,
 										"abv": 40,
@@ -33,7 +33,7 @@
 								},
 								{
 									"data": {
-										"name": "Bacardi Carta Negra",
+										"name": "BacardiCartaNegra",
 										"volume": 0.7,
 										"price": 1260,
 										"abv": 40,
@@ -46,7 +46,7 @@
 								},
 								{
 									"data": {
-										"name": "Captain Morgan Black Spiced",
+										"name": "CaptainMorganBlackSpiced",
 										"volume": 0.7,
 										"price": 1260,
 										"abv": 40,
@@ -59,7 +59,7 @@
 								},
 								{
 									"data": {
-										"name": "Botran 12 Anejo",
+										"name": "Botran12Anejo",
 										"volume": 0.7,
 										"price": 3400,
 										"abv": 40,
@@ -79,7 +79,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Ron Barcelo Gran Anejo",
+										"name": "RonBarceloGranAnejo",
 										"volume": 0.7,
 										"price": 1500,
 										"abv": 37,
@@ -92,7 +92,7 @@
 								},
 								{
 									"data": {
-										"name": "Bacardi OakHeart",
+										"name": "BacardiOakHeart",
 										"volume": 0.7,
 										"price": 1250,
 										"abv": 35,
@@ -105,7 +105,7 @@
 								},
 								{
 									"data": {
-										"name": "Captain Morgan Spiced Gold",
+										"name": "CaptainMorganSpicedGold",
 										"volume": 0.7,
 										"price": 1400,
 										"abv": 35,
@@ -118,7 +118,7 @@
 								},
 								{
 									"data": {
-										"name": "Bacardi Reserva 8 Anos",
+										"name": "BacardiReserva8Anos",
 										"volume": 0.7,
 										"price": 2500,
 										"abv": 40,
@@ -145,7 +145,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Кизлярка Сливовая",
+										"name": "КизляркаСливовая",
 										"volume": 0.5,
 										"price": 550,
 										"abv": 40,
@@ -158,7 +158,7 @@
 								},
 								{
 									"data": {
-										"name": "Арцах Сливовый",
+										"name": "АрцахСливовый",
 										"volume": 0.75,
 										"price": 2250,
 										"abv": 40,
@@ -171,7 +171,7 @@
 								},
 								{
 									"data": {
-										"name": "R. Jelinek, Plum Vodka",
+										"name": "PlumVodka",
 										"volume": 0.5,
 										"price": 1100,
 										"abv": 40,
@@ -184,7 +184,7 @@
 								},
 								{
 									"data": {
-										"name": "Анасеули Сливовая",
+										"name": "АнасеулиСливовая",
 										"volume": 0.5,
 										"price": 1300,
 										"abv": 40,
@@ -204,7 +204,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Троекуровка Яблочная",
+										"name": "ТроекуровкаЯблочная",
 										"volume": 0.5,
 										"price": 550,
 										"abv": 40,
@@ -217,7 +217,7 @@
 								},
 								{
 									"data": {
-										"name": "Кизлярка Яблочная",
+										"name": "КизляркаЯблочная",
 										"volume": 0.5,
 										"price": 600,
 										"abv": 40,
@@ -243,7 +243,7 @@
 								},
 								{
 									"data": {
-										"name": "Белая Березка",
+										"name": "БелаяБерезка",
 										"volume": 0.5,
 										"price": 660,
 										"abv": 38,
@@ -276,7 +276,7 @@
 								},
 								{
 									"data": {
-										"name": "Isidoros Arvanitis Ouzo Plomari",
+										"name": "IsidorosArvanitisOuzoPlomari",
 										"volume": 0.5,
 										"price": 870,
 										"abv": 40,
@@ -302,7 +302,7 @@
 								},
 								{
 									"data": {
-										"name": "Ouzo Romios",
+										"name": "OuzoRomios",
 										"volume": 0.7,
 										"price": 800,
 										"abv": 38,
@@ -329,7 +329,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Dewar's",
+										"name": "Dewars",
 										"volume": 0.5,
 										"price": 2100,
 										"abv": 40,
@@ -342,7 +342,7 @@
 								},
 								{
 									"data": {
-										"name": "Darby's",
+										"name": "Darbys",
 										"volume": 0.75,
 										"price": 3100,
 										"abv": 45,
@@ -368,7 +368,7 @@
 								},
 								{
 									"data": {
-										"name": "Fowler's",
+										"name": "Fowlers",
 										"volume": 0.5,
 										"price": 500,
 										"abv": 40,
@@ -474,7 +474,7 @@
 								},
 								{
 									"data": {
-										"name": "Westmalle Dark",
+										"name": "WestmalleDark",
 										"volume": 0.33,
 										"price": 250,
 										"abv": 7,
@@ -533,7 +533,7 @@
 								},
 								{
 									"data": {
-										"name": "Westmalle Light",
+										"name": "WestmalleLight",
 										"volume": 0.33,
 										"price": 320,
 										"abv": 10,
@@ -586,7 +586,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Chateau Les Jouberts",
+										"name": "ChateauLesJouberts",
 										"volume": 0.75,
 										"price": 970,
 										"abv": 13,
@@ -599,7 +599,7 @@
 								},
 								{
 									"data": {
-										"name": "Marques de Montejos",
+										"name": "MarquesdeMontejos",
 										"volume": 0.75,
 										"price": 1300,
 										"abv": 13,
@@ -612,7 +612,7 @@
 								},
 								{
 									"data": {
-										"name": "Ramirez de la Piscina",
+										"name": "RamirezdelaPiscina",
 										"volume": 0.75,
 										"price": 1400,
 										"abv": 15,
@@ -625,7 +625,7 @@
 								},
 								{
 									"data": {
-										"name": "Familia Bastida",
+										"name": "FamiliaBastida",
 										"volume": 0.75,
 										"price": 900,
 										"abv": 14,
@@ -645,7 +645,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Rio Lilo",
+										"name": "RioLilo",
 										"volume": 0.75,
 										"price": 880,
 										"abv": 12,
@@ -671,7 +671,7 @@
 								},
 								{
 									"data": {
-										"name": "Brancott Estate",
+										"name": "BrancottEstate",
 										"volume": 0.75,
 										"price": 970,
 										"abv": 13,
@@ -684,7 +684,7 @@
 								},
 								{
 									"data": {
-										"name": "Askaneli Brothers",
+										"name": "AskaneliBrothers",
 										"volume": 0.75,
 										"price": 750,
 										"abv": 13,
@@ -711,7 +711,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Casa Mariol",
+										"name": "CasaMariol",
 										"volume": 1,
 										"price": 2300,
 										"abv": 12,
@@ -731,7 +731,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Martini Rose",
+										"name": "MartiniRose",
 										"volume": 1,
 										"price": 1115,
 										"abv": 15,
@@ -744,7 +744,7 @@
 								},
 								{
 									"data": {
-										"name": "Gancia Rose",
+										"name": "GanciaRose",
 										"volume": 1,
 										"price": 800,
 										"abv": 16,
@@ -757,7 +757,7 @@
 								},
 								{
 									"data": {
-										"name": "Cinzano Rose",
+										"name": "CinzanoRose",
 										"volume": 1,
 										"price": 980,
 										"abv": 14,
@@ -790,7 +790,7 @@
 							"children": [
 								{
 									"data": {
-										"name": "Martini White",
+										"name": "MartiniWhite",
 										"volume": 1,
 										"price": 1115,
 										"abv": 15,
@@ -803,7 +803,7 @@
 								},
 								{
 									"data": {
-										"name": "Cinzano White",
+										"name": "CinzanoWhite",
 										"volume": 1,
 										"price": 980,
 										"abv": 15,
@@ -829,7 +829,7 @@
 								},
 								{
 									"data": {
-										"name": "Gancia White",
+										"name": "GanciaWhite",
 										"volume": 1,
 										"price": 760,
 										"abv": 15,
